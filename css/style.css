@@ -11,6 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
+    position: relative;
 }
 .greetings{
     font-size: 6rem;
@@ -22,7 +23,7 @@ body{
 @keyframes glow{
     0%, 100%{
         color: #fff;
-        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        text-shadow: 0 0 12px #b90808, 0 0 50px #b90808, 0 0 100px #b90808;
     }
     10%, 90%{
         color: #111;
@@ -47,12 +48,24 @@ body{
     margin-bottom: 20px;
 }
 
-.button a{
+.button {
+    position: absolute;
+    left: 650px; ; /* Positions the button at the left edge of the body */
+    bottom: 350px;
+}
+
+.button2 {
+    position: absolute;
+    right: 650px; /* Positions the button at the right edge of the body */
+    bottom: 350px;
+}
+
+.button a, .button2 a {
     text-decoration: none;
     font-size: 1rem;
     color: #111;
+    display: block; /* Makes the entire button clickable */
 }
-
 @media screen and (max-width:574px){
     .greetings{
         display: block;
